@@ -1,0 +1,226 @@
+body {
+    background-color: 0d1b2a;
+}
+
+/* Home Page */
+#top-navigation-bar {
+    height: 4vh;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: 001219;
+    color: e0e1dd;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+}
+
+#page-name {
+    margin-left: 20px;
+}
+
+#login-credentials {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+#login-credentials a {
+    margin-left: 30px;
+    color: e0e1dd;
+    text-decoration: none;
+}
+
+#login-credentials a:hover {
+    color: fca311;
+}
+
+#data {
+    display: grid;
+    justify-content: center;
+}
+
+#add-and-timer {
+    display: flex;
+    margin-top: 60px;
+    align-items: center;
+}
+
+#add-ticker-form {
+    margin-top: 15px;
+}
+
+#add-ticker-form input {
+    height: 35px;
+    width: 385px;
+    font-size: 17px;
+    background-color: e0e1dd;
+    border: transparent;
+    margin-top: 1px;
+}
+
+#add-ticker-form button {
+    height: 35px;
+    width: 50px;
+    margin-bottom: 1px;
+    margin-left: 5px;
+    background-color: e0e1dd;
+    border: 1px solid;
+    border-color: e0e1dd;
+}
+
+#add-ticker-form button:hover {
+    background-color: transparent;
+    border-color: fca311;
+    color: fca311;
+    cursor: pointer;
+}
+
+#remove-all-btn {
+    height: 35px;
+    width: 90px;
+    margin: 0px 10px 0px 10px;
+    background-color: e0e1dd;
+    border: 1px solid;
+    border-color: e0e1dd;
+}
+
+#remove-all-btn:hover {
+    background-color: transparent;
+    border-color: fca311;
+    color: fca311;
+    cursor: pointer;
+}
+
+#timer {
+    color: e0e1dd;
+}
+
+#tickers-table {
+    margin-left: auto;
+    margin-right: auto;
+    color: e0e1dd;
+    width: 700px;
+    border-collapse: collapse;
+}
+
+#tickers-header {
+    height: 50px;
+    background-color: 001219;
+    padding: 0px 10px 0px 10px;
+}
+
+.ticker-row {
+    height: 50px;
+    text-align: center;
+    border-bottom: 1px solid #dad7cd;
+}
+
+.remove-btn {
+    background-color: e0e1dd;
+    border: 1px solid;
+    border-color: e0e1dd;
+}
+
+.remove-btn:hover {
+    background-color: transparent;
+    border-color: fca311;
+    color: fca311;
+    cursor: pointer;
+}
+
+.red {
+    color: #ff0045;
+}
+
+.gray {
+    color: #808080;
+}
+
+.green {
+    color: #0caa00;
+}
+
+.red-flash {
+    transition: background-color 0.5s;
+    background-color: #FFCCCC !important;  
+}
+
+.green-flash {
+    transition: background-color 0.5s;
+    background-color: #CCFFCC !important;
+}
+
+.gray-flash {
+    transition: background-color 0.5s;
+    background-color: #CCC !important;
+}
+
+/* Register/Login Page */
+.container {
+    background-color: 001219;
+    color: e0e1dd;
+    display: grid;
+    width: 500px;
+    height: 400px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.container-top h1 {
+    margin: 20px 0px 0px 0px;
+    text-align: center;
+}
+
+.flash-messages {
+    text-align: center;
+    height: 40px;
+    color: red;
+}
+
+.flashes {
+    list-style-type: none;
+    padding: 0;
+}
+
+.container form {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.container label {
+    font-size: larger;
+}
+
+.container input {
+    width: 300px;
+    height: 30px;
+    font-size: 16px;
+    background-color: e0e1dd;
+    border: transparent;
+    border-radius: 1px;
+    margin-bottom: 10px;
+}
+
+.register-login-btn {
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.register-login-btn:hover {
+    border: 1px solid #fca311;
+    background-color: transparent;
+    color: fca311;
+    cursor: pointer;
+}
+
+.container p {
+    text-align: center;
+}

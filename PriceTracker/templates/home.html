@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div id="top-navigation-bar">
+    <div id="page-name">
+        <h1>Price Tracker</h1>
+    </div>
+    
+    <div id="login-credentials">
+        <h3>{{ current_user.username }}</h3>
+        <h3><a href="{{ url_for('logout') }}">logout</a></h3>
+    </div>
+</div>
+
+<div id="data">
+    <div id="add-and-timer">
+        <form id="add-ticker-form">
+            <input type="text" id="new-ticker" name="add-ticker" placeholder="  Add Ticker.." required>
+            <button type="submit">Add</button>
+        </form>
+        <button id="remove-all-btn">Remove All</button>
+        <p id="timer">Next update in <span id="counter"></span> sec</p>
+    </div>
+    <table id="tickers-table">
+        <thead>
+            <tr id="tickers-header">
+                <th id="ticker-symbol">Symbol</th>
+                <th>Price</th>
+                <th>Price Change</th>
+                <th>Price (24h%)</th>
+                <th>Volume</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody id="tickers-body"></tbody>
+    </table>
+</div>
+
+{% endblock %}
