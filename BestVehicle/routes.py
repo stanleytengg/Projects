@@ -24,12 +24,17 @@ def routes(app, db):
 
         try:
             wait = WebDriverWait(driver, 10)
-            cars = wait.until(EC.presence_of_all_elements_located((By.XPATH, '//a[@class="make-model-link kmx-list-item-link"]')))
+            cars_info = wait.until(EC.presence_of_all_elements_located((By.XPATH, '//a[@class="make-model-link kmx-list-item-link"]')))
             prices = wait.until(EC.presence_of_all_elements_located((By.XPATH, '//span[@class="sc--price-miles-info--price"]')))
+            miles = wait.until(EC.presence_of_all_elements_located((By.XPATH, '//span[@class="sc--price-miles-info--miles"]')))
             
-            for car, price in zip(cars, prices):
-                car_text = " ".join(car.text.splitlines())
-                print(f"Car: {car_text} Price: {price.text}")
+            for car, price, mile in zip(cars_info, prices, miles):
+                year, name = car.text.split(' ', 1)
+                name = name.replace('\n', ' ')
+                new_car = Vehicle(name=name, year=int(year), price=price.text, miles=mile.text)
+                db.session.add(new_car)
+            
+            db.session.commit()
 
         except Exception as e:
             print(f"An error occurred: {e}")
