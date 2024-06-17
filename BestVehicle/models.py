@@ -5,7 +5,7 @@ class Vehicle(db.Model):
     name = db.Column(db.String(50), nullable=False)
     year = db.Column(db.Integer, nullable=False)
     price = db.Column(db.String(10), nullable=False)
-    miles = db.Column(db.String(20), nullable=False)
+    miles = db.Column(db.Integer, nullable=False)
 
     def get_id(self):
         return self.id
