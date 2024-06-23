@@ -7,7 +7,6 @@ db = SQLAlchemy()
 def create_app():
     app = Flask(__name__)
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///vehicles.db'
-    app.secret_key = 'secretkey234'
 
     db.init_app(app)
 

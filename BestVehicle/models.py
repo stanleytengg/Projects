@@ -6,6 +6,3 @@ class Vehicle(db.Model):
     year = db.Column(db.Integer, nullable=False)
     price = db.Column(db.String(10), nullable=False)
     miles = db.Column(db.Integer, nullable=False)
-
-    def get_id(self):
-        return self.id
